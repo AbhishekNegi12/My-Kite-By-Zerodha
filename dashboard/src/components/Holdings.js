@@ -12,7 +12,7 @@ const Holdings = () => {
 
   // [] - empty array is used here to only call it one time
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("https://zerodha-backend-6fvx.onrender.com/allHoldings").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });

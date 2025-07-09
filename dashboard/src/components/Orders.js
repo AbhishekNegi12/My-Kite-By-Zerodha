@@ -7,7 +7,7 @@ const Orders = () => {
 
   useEffect(() => {
     const fetchOrders = () => {
-      axios.get("http://localhost:3002/orders").then((res) => {
+      axios.get("https://zerodha-backend-6fvx.onrender.com/orders").then((res) => {
         setOrders(res.data);
       });
     };
