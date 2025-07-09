@@ -39,7 +39,8 @@ const allowedOrigins = [
   "http://localhost:3000", // local frontend
   "http://localhost:3001", // local dashboard
   "https://frontend-zerodha-pied.vercel.app", // deployed frontend
-  "https://dashboard-zerodha-pied.vercel.app", // deployed dashboard (replace with your actual dashboard URL)
+  "https://dashboard-zerodha-pied.vercel.app",
+  "https://my-kite-by-zerodha-dashboard.vercel.app", // deployed dashboard (replace with your actual dashboard URL)
 ];
 
 app.use(
