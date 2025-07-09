@@ -120,16 +120,16 @@ my-zerodha/
 ![Landing Page Screenshot](screenshot/Landing_Page.png)
 
 ### Dashboard
-![Dashboard Screenshot](screenshots/Dashboard.png)
+![Dashboard Screenshot](screenshot/Dashboard.png)
 
 ### Login
-![Dashboard Screenshot](screenshots/Login.png)
+![Dashboard Screenshot](screenshot/Login.png)
 
 ### SignUp
-![Dashboard Screenshot](screenshots/Signup.png)
+![Dashboard Screenshot](screenshot/Signup.png)
 
 ### Charts
-![Dashboard Screenshot](screenshots/Charts.png)
+![Dashboard Screenshot](screenshot/Graphs.png)
 
 ---
 
