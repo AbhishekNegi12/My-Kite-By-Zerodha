@@ -48,7 +48,7 @@ const Login = () => {
         }
         setTimeout(() => {
           // Open the dashboard app in a new tab
-          window.open('http://localhost:3001', '_blank');
+          window.open('https://my-kite-by-zerodha-dashboard.vercel.app', '_blank');
         }, 1000);
       } else {
         handleError(message);
