@@ -30,8 +30,8 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:3001',
-    'https://your-frontend.vercel.app',
-    'https://your-dashboard.vercel.app'
+    'https://frontend-zerodha-pied.vercel.app/',
+    'https://my-kite-by-zerodha-dashboard.vercel.app/'
   ],
   credentials: true
 }));
