@@ -54,7 +54,7 @@ my-zerodha/
 ## Setup & Installation
 1. **Clone the repo:**
    ```sh
-   git clone https://github.com/your-username/my-zerodha.git
+   git clone https://github.com/AbhishekNegi12/My-Kite-By-Zerodha.git
    cd my-zerodha
    ```
 2. **Install dependencies:**
