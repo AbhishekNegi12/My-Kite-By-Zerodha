@@ -22,8 +22,17 @@ const url = process.env.MONGO_URL;
 const app = express();
 
 // CORS setup for credentials
+// app.use(cors({
+//   origin: ['http://localhost:3000','http://localhost:3001'], // frontend URL
+//   credentials: true
+// }));
 app.use(cors({
-  origin: ['http://localhost:3000','http://localhost:3001'], // frontend URL
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://your-frontend.vercel.app',
+    'https://your-dashboard.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
