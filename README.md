@@ -114,6 +114,11 @@ my-zerodha/
 - Deploy frontend and dashboard (Vercel, Netlify, etc.)
 - Use environment variables for all secrets and URLs
 
+### Live Demo
+- **Frontend:** [https://frontend-zerodha-pied.vercel.app](https://frontend-zerodha-pied.vercel.app)
+- **Dashboard:** [https://my-kite-by-zerodha-dashboard.vercel.app](https://my-kite-by-zerodha-dashboard.vercel.app)
+- **Backend API:** [https://zerodha-backend-6fvx.onrender.com](https://zerodha-backend-6fvx.onrender.com)
+
 ---
 
 ## Screenshots
