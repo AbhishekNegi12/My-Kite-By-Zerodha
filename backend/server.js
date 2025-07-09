@@ -7,13 +7,13 @@ const express = require("express");
 //establishing mongodb connection to express
 const mongoose = require("mongoose");
 
-const cors = require('cors')
+const cors = require("cors");
 
 const cookieParser = require("cookie-parser");
 const authRoute = require("./routes/AuthRoute");
 
-const { HoldingsModel } = require('./model/HoldingsModel');
-const { PositionsModel } = require('./model/PositionsModel');
+const { HoldingsModel } = require("./model/HoldingsModel");
+const { PositionsModel } = require("./model/PositionsModel");
 
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGO_URL;
@@ -26,15 +26,28 @@ const app = express();
 //   origin: ['http://localhost:3000','http://localhost:3001'], // frontend URL
 //   credentials: true
 // }));
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://frontend-zerodha-pied.vercel.app/',
-    'https://my-kite-by-zerodha-dashboard.vercel.app/'
-  ],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: [
+//     'http://localhost:3000',
+//     'http://localhost:3001',
+//     'https://frontend-zerodha-pied.vercel.app/',
+//     'https://my-kite-by-zerodha-dashboard.vercel.app/'
+//   ],
+//   credentials: true
+// }));
+const allowedOrigins = [
+  "http://localhost:3000", // local frontend
+  "http://localhost:3001", // local dashboard
+  "https://frontend-zerodha-pied.vercel.app", // deployed frontend
+  "https://dashboard-zerodha-pied.vercel.app", // deployed dashboard (replace with your actual dashboard URL)
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -214,21 +227,21 @@ app.use("/", authRoute);
 //   });
 //   res.send("Done!");
 // });
- 
+
 //creating backend api end point to get data from db
-app.get('/allHoldings', async(req,res)=>{
-    //fetching everything
-    let allHoldings = await HoldingsModel.find({})
+app.get("/allHoldings", async (req, res) => {
+  //fetching everything
+  let allHoldings = await HoldingsModel.find({});
 
-    res.json(allHoldings);
-})
+  res.json(allHoldings);
+});
 
-app.get('/allPositions', async(req,res)=>{
-    //fetching everything
-    let allPositions = await PositionsModel.find({})
-    //frtching in json format
-    res.json(allPositions);
-})
+app.get("/allPositions", async (req, res) => {
+  //fetching everything
+  let allPositions = await PositionsModel.find({});
+  //frtching in json format
+  res.json(allPositions);
+});
 
 // triggering the express.application
 app.listen(PORT, () => {
