@@ -117,7 +117,19 @@ my-zerodha/
 ---
 
 ## Screenshots
-> Add screenshots of your landing page, signup/login, and dashboard here!
+![Landing Page Screenshot](screenshot/Landing_Page.png)
+
+### Dashboard
+![Dashboard Screenshot](screenshots/Dashboard.png)
+
+### Login
+![Dashboard Screenshot](screenshots/Login.png)
+
+### SignUp
+![Dashboard Screenshot](screenshots/Signup.png)
+
+### Charts
+![Dashboard Screenshot](screenshots/Charts.png)
 
 ---
 
